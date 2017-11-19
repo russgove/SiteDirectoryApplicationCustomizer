@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- List of possible elements expected: 
+        'CustomAction, ClientWebPart, ClientSideComponent, 
+        Field, ContentType, ListInstance, Module, PropertyBag' 
+    -->
+
+     <!-- List (TemplateType 100) -->
+    <ListInstance 
+            CustomSchema="SiteInformationSchema.xml"
+            FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+            Title="Site Information" 
+            Description=""
+            TemplateType="100"
+            Url="Lists/SiteInformation"
+            Hidden="FALSE">
+            <!-- Add default data with the list -->
+            <!-- Note: Deactivating and activating the feature will 
+            duplicate the data, so remove or comment if no initial data needed
+            -->
+           
+    </ListInstance>
+
+    
+</Elements>
