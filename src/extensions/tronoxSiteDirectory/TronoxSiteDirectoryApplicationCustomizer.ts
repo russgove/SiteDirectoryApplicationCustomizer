@@ -59,7 +59,7 @@ export default class TronoxSiteDirectoryApplicationCustomizer
       debugger;
       return pnp.sp.web.lists.getByTitle("Site Information").items.get().then((items) => {
         debugger;
-        if (items.length < 1) {
+        if (items.length < 1) { // create the item in the site info list
           
           let batch = pnp.sp.createBatch();
           // get the home page, so we can create the skeleton site info
@@ -84,7 +84,7 @@ export default class TronoxSiteDirectoryApplicationCustomizer
           // get the EditForm for the site info list , so we can link the user back to the list
           pnp.sp.web.lists.getByTitle("Site Information").forms.filter('FormType eq 6').inBatch(batch).get().then((forms => {
             debugger;
-            editFormUrl= this.context.pageContext.web.absoluteUrl +"/" + forms[0].url;
+            editFormUrl= "https://"+window.location.hostname+"/" + forms[0].ServerRelativeUrl;
            
           })).catch((error) => {
 
@@ -93,16 +93,29 @@ export default class TronoxSiteDirectoryApplicationCustomizer
           });
           return batch.execute().then((x) => {
             // see http://www.pointtaken.no/blogg/updating-single-and-multi-value-taxonomy-fields-using-pnp-js-core/z
-            const termString = '-1;#Global|98587941-8870-4d2a-942f-0beb1982ef66;';
+            const termString = '-1;#Global|98587941-8870-4d2a-942f-0beb1982ef66;';// global
             
             return pnp.sp.web.lists.getByTitle("Site Information").items.add({
               Title: title,
               SiteDescription: description,
+              SiteLink: {
+                '__metadata': { 'type': 'SP.FieldUrlValue' },
+                'Description': title,
+                'Url': welcomePage
+            },
               "hf0f9d05de3a4646a1b8810ef201df06":termString
             
             }).then((item) => {
               debugger;
-              editFormUrl=editFormUrl+"?Id="+ item.data.Id;
+              editFormUrl=editFormUrl+"?Id="+ item.data.Id+"&SourceUrl="+this.context.pageContext.web.absoluteUrl;
+              let message="The 'Site Information' list has been created in your site and a default entry has been added. Please click <a href='"+editFormUrl+"'>here</a> to verify and complete the site information";
+              this._topPlaceholder.domElement.innerHTML = `
+              <div class="${styles.app}">
+                <div class="ms-bgColor-themeDark ms-fontColor-white ${styles.top}">
+                  <i class="ms-Icon ms-Icon--Info" aria-hidden="true"></i> ${message}
+                </div>
+              </div>`;
+              
             }).catch((error) => {
               debugger;
             });
@@ -110,6 +123,10 @@ export default class TronoxSiteDirectoryApplicationCustomizer
             debugger;
 
           });
+        }else{ // remind user to complete the entry
+          debugger;
+          
+
         }
 
       }).catch((error) => {

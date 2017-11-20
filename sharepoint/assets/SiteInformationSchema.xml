@@ -1,9 +1,170 @@
 <List xmlns:ows="Microsoft SharePoint" Title="Basic List" EnableContentTypes="TRUE" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Basic List" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
   <MetaData>
     <ContentTypes>
-      <ContentTypeRef ID="0x010035FDF24EA816304895893E8B8835DDF4" />
+      <ContentTypeRef ID="0x010035FDF24EA816304895893E8B8835DDF4" >
+      </ContentTypeRef>
     </ContentTypes>
-    <Fields></Fields>
+    <Fields>
+     <Field ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ContentType" Group="_Hidden" Type="Computed" DisplayName="Content Type" Sealed="TRUE" Sortable="FALSE" RenderXMLUsingPattern="TRUE" PITarget="MicrosoftWindowsSharePointServices" PIAttribute="ContentTypeID" DelayActivateTemplateBinding="GROUP,SPSPERS,SITEPAGEPUBLISHING" Customization="">
+      <FieldRefs>
+        <FieldRef ID="{03e45e84-1992-4d42-9116-26f756012634}" Name="ContentTypeId" />
+      </FieldRefs>
+      <DisplayPattern>
+        <MapToContentType>
+          <Column Name="ContentTypeId" />
+        </MapToContentType>
+      </DisplayPattern>
+    </Field>
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" Group="_Hidden" Type="Text" DisplayName="Title" Required="TRUE" FromBaseType="TRUE" DelayActivateTemplateBinding="GROUP,SPSPERS,SITEPAGEPUBLISHING" Customization="" ShowInNewForm="TRUE" ShowInEditForm="TRUE" />
+    <Field Type="Note" DisplayName="Site Description" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Sortable="FALSE" Group="Site Catalog Columns" ID="{19e56dff-2818-4501-8204-6f811565da55}" SourceID="{213c6c2f-1ca6-4721-b547-d5827bcc88df}" StaticName="SiteDescription" Name="SiteDescription" CustomFormatter="" RestrictedMode="TRUE" AppendOnly="FALSE" UnlimitedLengthInDocumentLibrary="FALSE" Version="1" Customization="" AllowDeletion="TRUE" />
+    <Field Type="Note" DisplayName="SiteDepartment_0" StaticName="j38a792f394e4b1b87278c688d74df04" Name="j38a792f394e4b1b87278c688d74df04" ID="{1bf45bcf-8790-4a3a-ae6c-1798e3b277d2}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{213c6c2f-1ca6-4721-b547-d5827bcc88df}" Version="1" Customization="" />
+    <Field Type="LookupMulti" DisplayName="Taxonomy Catch All Column" StaticName="TaxCatchAll" Name="TaxCatchAll" ID="{f3b0adf9-c1a2-4b02-920d-943fba4b3611}" ShowInViewForms="FALSE" List="{c6adda4b-07e9-42f8-83d8-b3978316e8c0}" WebId="99cd2cc1-af2d-4770-b32d-621ee78bdaac" Required="FALSE" CanToggleHidden="TRUE" ShowField="CatchAllData" SourceID="{213c6c2f-1ca6-4721-b547-d5827bcc88df}" Mult="TRUE" Sortable="FALSE" AllowDeletion="TRUE" Sealed="TRUE" Hidden="TRUE" Version="5" Customization="" />
+    <Field Type="LookupMulti" DisplayName="Taxonomy Catch All Column1" StaticName="TaxCatchAllLabel" Name="TaxCatchAllLabel" ID="{8f6b6dd8-9357-4019-8172-966fcd502ed2}" ShowInViewForms="FALSE" List="{c6adda4b-07e9-42f8-83d8-b3978316e8c0}" WebId="99cd2cc1-af2d-4770-b32d-621ee78bdaac" Required="FALSE" CanToggleHidden="TRUE" ShowField="CatchAllDataLabel" FieldRef="{F3B0ADF9-C1A2-4b02-920D-943FBA4B3611}" SourceID="{213c6c2f-1ca6-4721-b547-d5827bcc88df}" Mult="TRUE" Sortable="FALSE" AllowDeletion="TRUE" Sealed="TRUE" Hidden="TRUE" ReadOnly="TRUE" Version="5" Customization="" />
+    <Field Type="TaxonomyFieldType" DisplayName="Site Department" List="{c6adda4b-07e9-42f8-83d8-b3978316e8c0}" WebId="99cd2cc1-af2d-4770-b32d-621ee78bdaac" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" Group="Site Catalog Columns" ID="{338a792f-394e-4b1b-8727-8c688d74df04}" SourceID="{213c6c2f-1ca6-4721-b547-d5827bcc88df}" StaticName="SiteDepartment" Name="SiteDepartment" Version="1" Customization="" AllowDeletion="TRUE">
+      <Default></Default>
+      <Customization>
+        <ArrayOfProperty>
+          <Property>
+            <Name>SspId</Name>
+            <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">a6241b04-ebf2-4095-92bb-cf041dc2cfbb</Value>
+          </Property>
+          <Property>
+            <Name>GroupId</Name>
+          </Property>
+          <Property>
+            <Name>TermSetId</Name>
+            <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">a685a0d9-51a2-4599-a0aa-d0d6dba3be64</Value>
+          </Property>
+          <Property>
+            <Name>AnchorId</Name>
+            <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+          </Property>
+          <Property>
+            <Name>UserCreated</Name>
+            <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+          </Property>
+          <Property>
+            <Name>Open</Name>
+            <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+          </Property>
+          <Property>
+            <Name>TextField</Name>
+            <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{1bf45bcf-8790-4a3a-ae6c-1798e3b277d2}</Value>
+          </Property>
+          <Property>
+            <Name>IsPathRendered</Name>
+            <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+          </Property>
+          <Property>
+            <Name>IsKeyword</Name>
+            <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+          </Property>
+          <Property>
+            <Name>TargetTemplate</Name>
+          </Property>
+          <Property>
+            <Name>CreateValuesInEditForm</Name>
+            <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+          </Property>
+          <Property>
+            <Name>FilterAssemblyStrongName</Name>
+            <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+          </Property>
+          <Property>
+            <Name>FilterClassName</Name>
+            <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+          </Property>
+          <Property>
+            <Name>FilterMethodName</Name>
+            <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+          </Property>
+          <Property>
+            <Name>FilterJavascriptProperty</Name>
+            <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+          </Property>
+        </ArrayOfProperty>
+      </Customization>
+    </Field>
+    <Field Type="Note" DisplayName="SiteLocation_0" StaticName="hf0f9d05de3a4646a1b8810ef201df06" Name="hf0f9d05de3a4646a1b8810ef201df06" ID="{e2a303c6-777d-4806-b63d-5815aeaa1d5c}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{213c6c2f-1ca6-4721-b547-d5827bcc88df}" Version="1" Customization="" />
+    <Field Type="TaxonomyFieldTypeMulti" DisplayName="Site Location" List="{c6adda4b-07e9-42f8-83d8-b3978316e8c0}" WebId="99cd2cc1-af2d-4770-b32d-621ee78bdaac" ShowField="Term1033" Required="TRUE" EnforceUniqueValues="FALSE" Mult="TRUE" Sortable="FALSE" Group="Site Catalog Columns" ID="{1f0f9d05-de3a-4646-a1b8-810ef201df06}" SourceID="{213c6c2f-1ca6-4721-b547-d5827bcc88df}" StaticName="SiteLocation" Name="SiteLocation" Version="1" Customization="" AllowDeletion="TRUE">
+      <Default></Default>
+      <Customization>
+        <ArrayOfProperty>
+          <Property>
+            <Name>SspId</Name>
+            <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">a6241b04-ebf2-4095-92bb-cf041dc2cfbb</Value>
+          </Property>
+          <Property>
+            <Name>GroupId</Name>
+          </Property>
+          <Property>
+            <Name>TermSetId</Name>
+            <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">14c04d67-5038-4289-8ca7-4cdeeef69b12</Value>
+          </Property>
+          <Property>
+            <Name>AnchorId</Name>
+            <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+          </Property>
+          <Property>
+            <Name>UserCreated</Name>
+            <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+          </Property>
+          <Property>
+            <Name>Open</Name>
+            <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+          </Property>
+          <Property>
+            <Name>TextField</Name>
+            <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{e2a303c6-777d-4806-b63d-5815aeaa1d5c}</Value>
+          </Property>
+          <Property>
+            <Name>IsPathRendered</Name>
+            <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+          </Property>
+          <Property>
+            <Name>IsKeyword</Name>
+            <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+          </Property>
+          <Property>
+            <Name>TargetTemplate</Name>
+          </Property>
+          <Property>
+            <Name>CreateValuesInEditForm</Name>
+            <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+          </Property>
+          <Property>
+            <Name>FilterAssemblyStrongName</Name>
+            <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+          </Property>
+          <Property>
+            <Name>FilterClassName</Name>
+            <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+          </Property>
+          <Property>
+            <Name>FilterMethodName</Name>
+            <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+          </Property>
+          <Property>
+            <Name>FilterJavascriptProperty</Name>
+            <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+          </Property>
+        </ArrayOfProperty>
+      </Customization>
+    </Field>
+    <Field Type="URL" DisplayName="Site Logo Url" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Image" Group="Site Catalog Columns" ID="{9e78e3b5-3c73-4a8c-841b-73fe300ee599}" SourceID="{213c6c2f-1ca6-4721-b547-d5827bcc88df}" StaticName="SiteLogoUrl" Name="SiteLogoUrl" CustomFormatter="" Version="1" Customization="" AllowDeletion="TRUE" />
+    <Field Type="Choice" DisplayName="Site Environment" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" Group="Site Catalog Columns" ID="{fae64674-99b1-44e8-a22c-606614a33ad0}" SourceID="{213c6c2f-1ca6-4721-b547-d5827bcc88df}" StaticName="SiteEnvironment" Name="SiteEnvironment" CustomFormatter="" Version="1" Customization="" AllowDeletion="TRUE">
+      <Default>Production</Default>
+      <CHOICES>
+        <CHOICE>Development</CHOICE>
+        <CHOICE>Test</CHOICE>
+        <CHOICE>Quality Assurance</CHOICE>
+        <CHOICE>Production</CHOICE>
+      </CHOICES>
+    </Field>
+    <Field Type="UserMulti" DisplayName="Site Manager" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" Mult="TRUE" Sortable="FALSE" Group="Site Catalog Columns" ID="{0b0640aa-c035-41d7-8082-2ef476f533f6}" SourceID="{213c6c2f-1ca6-4721-b547-d5827bcc88df}" StaticName="SiteManager" Name="SiteManager" Version="1" Customization="" AllowDeletion="TRUE" />
+    <Field Type="URL" DisplayName="Site Link" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Hyperlink" Group="Site Catalog Columns" ID="{a51da690-e939-4fcc-af45-679aa14de2e7}" SourceID="{213c6c2f-1ca6-4721-b547-d5827bcc88df}" StaticName="SiteLink" Name="SiteLink" CustomFormatter="" Version="1" Customization="" AllowDeletion="TRUE" />
+
+    </Fields>
     <Views>
       <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
         <XslLink Default="TRUE">main.xsl</XslLink>
@@ -11,7 +172,7 @@
         <RowLimit Paged="TRUE">1</RowLimit>
         <Toolbar Type="Standard" />
         <ViewFields>
-          <FieldRef Name="LinkTitle"></FieldRef>
+          <FieldRef Name="Title"></FieldRef>
         </ViewFields>
         <Query>
           <OrderBy>
