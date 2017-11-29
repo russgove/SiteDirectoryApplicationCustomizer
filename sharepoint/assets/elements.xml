@@ -4,7 +4,12 @@
         'CustomAction, ClientWebPart, ClientSideComponent, 
         Field, ContentType, ListInstance, Module, PropertyBag' 
     -->
-
+    <CustomAction
+        Title="TronoxSiteDirectory"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="d260cce6-0ab9-4b14-ab6c-bf3fe031b32e"
+        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </CustomAction>
      <!-- List (TemplateType 100) -->
     <ListInstance 
             CustomSchema="SiteInformationSchema.xml"

@@ -1,4 +1,6 @@
-<List xmlns:ows="Microsoft SharePoint" Title="Basic List" EnableContentTypes="TRUE" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Basic List" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+<List xmlns:ows="Microsoft SharePoint" Title="Basic List" EnableContentTypes="TRUE" 
+FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Basic List" BaseType="0"
+ xmlns="http://schemas.microsoft.com/sharepoint/">
   <MetaData>
     <ContentTypes>
       <ContentTypeRef ID="0x010035FDF24EA816304895893E8B8835DDF4" >
