@@ -138,11 +138,11 @@ export default class TronoxSiteDirectoryApplicationCustomizer
                 context.executeQueryAsync(function () {
 
                   editFormUrl = editFormUrl + "?ID=" + itemId + "&SourceUrl=" + myCustomizer.context.pageContext.web.absoluteUrl;
-                  let message = "A 'Site Information' list has been created in this site which will be used to display the site in the Tronox Site Directory, and default site information has been added. Please click <a href='" + editFormUrl + "'>here</a> to verify and complete the site information";
+                  let message = "A list titled 'Site Information' has been created in this site which will be used to display the site in the Tronox Site Directory, and default site information has been added.<br  /> Please click <a href='" + editFormUrl + "'>here</a> to verify and complete the site information. <br />You can edit the item in the Site Information list to update your listing in sthe Tronox Site Directory at any time (It may take a few hours for your changes to be refelected in the directory).";
                   myCustomizer._topPlaceholder.domElement.innerHTML = `
                       <div class="${styles.app}">
                         <div class="ms-bgColor-themeDark ms-fontColor-white ${mystyles.top}">
-                         <i class="ms-Icon ms-Icon--Info" aria-hidden="true"></i> ${message}
+                         ${message}
                         </div>
                      </div>`;
                   myCustomizer.removeCustomizer();
@@ -160,7 +160,7 @@ export default class TronoxSiteDirectoryApplicationCustomizer
           });
         }
         else {
-          console.log("Ther is an itemj in the list, removing custom action");
+          console.log("There is an item in the list, removing custom action");
           debugger;
           this.removeCustomizer();
         }
@@ -171,6 +171,7 @@ export default class TronoxSiteDirectoryApplicationCustomizer
       });
   }
   private async removeCustomizer() {
+    console.log("in  removeCustomizer")
     try {
       // Remove custom action from current sute
       let site = new Site(this.context.pageContext.site.absoluteUrl);
@@ -183,11 +184,11 @@ export default class TronoxSiteDirectoryApplicationCustomizer
               console.log("Extension removed");
             }).catch((error) => {
               debugger;
+              console.log("an error occurred removing the userCustomAction");
               console.log(error);
             });
-
             // reload the page once done if needed
-            window.location.href = window.location.href;
+            //window.location.href = window.location.href;
             break;
           }
         }
@@ -195,6 +196,7 @@ export default class TronoxSiteDirectoryApplicationCustomizer
     }
     catch (e) {
       debugger;
+      console.log("an error occurred in removeCustomizer")
     }
   }
 

@@ -1,4 +1,5 @@
-<List xmlns:ows="Microsoft SharePoint" Title="Basic List" EnableContentTypes="TRUE" 
+<List xmlns:ows="Microsoft SharePoint" Title="Basic List" EnableContentTypes="TRUE"  
+Description="This list contains the information used to display this site in the Tronox Site Directory"
 FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Basic List" BaseType="0"
  xmlns="http://schemas.microsoft.com/sharepoint/">
   <MetaData>
